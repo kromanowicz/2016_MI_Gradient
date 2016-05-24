@@ -39,7 +39,7 @@ The original .fastq files were submitted to the NCBI Sequence Read Archive under
 	- `bacteria.master.list.subsample.batch` Bacteria MOTHUR batch file
 	- `fungi.master.list.subsample.batch` Fungi MOTHUR batch file
 
-3. **Romanowicz-2016.Rmd:** RMarkdown dynamic document with rendered code for complete statistical reproducibility.
+3. **MI-Gradient-Romanowicz-2016.Rmd:** RMarkdown dynamic document with rendered code for complete statistical reproducibility.
 
 
 **Note:** This project is under the General MIT Public License.
