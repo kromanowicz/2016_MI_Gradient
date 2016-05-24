@@ -24,7 +24,7 @@ Direct any questions regarding this repository to lead author [Karl J. Romanowic
 The original .fastq files were submitted to the NCBI Sequence Read Archive under BioProject [PRJNA222775](http://www.ncbi.nlm.nih.gov/bioproject/PRJNA222775) with SRA accession numbers [SRR1944476](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1944476) and [SRR1944477](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1944477).
 
 ##### **Directories:**
-1. **Data:** Includes final output files from **MOTHUR** necessary to run statistics in **R** as well as the environmental metadata `env.txt` necessary for correlation analyses.
+1. **Data:** Includes final output files from **MOTHUR** necessary to run statistics in **R** as well as the environmental metadata `env.txt` necessary for PERMANOVA analyses.
 	- **Bacteria:** all `.oligos` files for separating bacterial reads by plot
 	- **Fungi:** all `.oligos` files for separating fungal reads by plot
 	- **mothur.reference:** 16S and 28S reference database files used for alignment and taxonomy assignment purposes for bacteria and fungi.
