@@ -40,4 +40,4 @@ The original .fastq files were submitted to the NCBI Sequence Read Archive under
 3. **Romanowicz-2016.Rmd:** RMarkdown dynamic document with rendered code for complete statistical reproducibility.
 
 
-**Note:** This project is under the GNU General Public License.
+**Note:** This project is under the General MIT Public License.
