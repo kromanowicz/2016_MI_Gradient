@@ -1,0 +1,92 @@
+#MOTHUR pipeline for analysis of bacteria 16S rRNA genes using both rDNA (gDNA) and rRNA (cDNA) template
+#Pipeline updated by Karl Romanowicz March 14, 2016 - keep a '#' infront of a command or note for mothur to ignore it
+#
+#Step 1: Extract fasta and qual files from the fastq output from raw sequencing data
+#
+set.dir(input=~/Desktop/Batch/Bacteria, output=~/Desktop/Batch/Bacteria, tempdefault=~/Desktop/Batch/mothur.reference)
+fastq.info(fastq=cDNA.A1.A4.ccs.fastq, fasta=t, qfile=t, pacbio=t)
+fastq.info(fastq=cDNA.A5.B2.ccs.fastq, fasta=t, qfile=t, pacbio=t)
+fastq.info(fastq=cDNA.B3.B6.ccs.fastq, fasta=t, qfile=t, pacbio=t)
+fastq.info(fastq=cDNA.C1.C4.ccs.fastq, fasta=t, qfile=t, pacbio=t)
+fastq.info(fastq=cDNA.C5.D2.ccs.fastq, fasta=t, qfile=t, pacbio=t)
+fastq.info(fastq=cDNA.D3.D6.ccs.fastq, fasta=t, qfile=t, pacbio=t)
+fastq.info(fastq=gDNA.A1.A4.ccs.fastq, fasta=t, qfile=t, pacbio=t)
+fastq.info(fastq=gDNA.A5.B2.ccs.fastq, fasta=t, qfile=t, pacbio=t)
+fastq.info(fastq=gDNA.B3.B6.ccs.fastq, fasta=t, qfile=t, pacbio=t)
+fastq.info(fastq=gDNA.C1.C4.ccs.fastq, fasta=t, qfile=t, pacbio=t)
+fastq.info(fastq=gDNA.C5.D2.ccs.fastq, fasta=t, qfile=t, pacbio=t)
+fastq.info(fastq=gDNA.D3.D6.ccs.fastq, fasta=t, qfile=t, pacbio=t)
+fastq.info(fastq=extra.sequences.ccs.fastq, fasta=t, qfile=t, pacbio=t)
+#
+#Step 2: Splitting the fasta file by barcode (oligos file) and removing low quality sequences
+#
+trim.seqs(fasta=gDNA.A1.A4.ccs.fasta, oligos=gDNA.A1.A4.16S.paired.oligos, qfile=gDNA.A1.A4.ccs.qual, checkorient=t, qwindowaverage=25, qwindowsize=50, maxambig=1, maxhomop=8, bdiffs=1, pdiffs=1, processors=4)
+trim.seqs(fasta=gDNA.A5.B2.ccs.fasta, oligos=gDNA.A5.B2.16S.paired.oligos, qfile=gDNA.A5.B2.ccs.qual, checkorient=t, qwindowaverage=25, qwindowsize=50, maxambig=1, maxhomop=8, bdiffs=1, pdiffs=1, processors=4)
+trim.seqs(fasta=gDNA.B3.B6.ccs.fasta, oligos=gDNA.B3.B6.16S.paired.oligos, qfile=gDNA.B3.B6.ccs.qual, checkorient=t, qwindowaverage=25, qwindowsize=50, maxambig=1, maxhomop=8, bdiffs=1, pdiffs=1, processors=4)
+trim.seqs(fasta=gDNA.C1.C4.ccs.fasta, oligos=gDNA.C1.C4.16S.paired.oligos, qfile=gDNA.C1.C4.ccs.qual, checkorient=t, qwindowaverage=25, qwindowsize=50, maxambig=1, maxhomop=8, bdiffs=1, pdiffs=1, processors=4)
+trim.seqs(fasta=gDNA.C5.D2.ccs.fasta, oligos=gDNA.C5.D2.16S.paired.oligos, qfile=gDNA.C5.D2.ccs.qual, checkorient=t, qwindowaverage=25, qwindowsize=50, maxambig=1, maxhomop=8, bdiffs=1, pdiffs=1, processors=4)
+trim.seqs(fasta=gDNA.D3.D6.ccs.fasta, oligos=gDNA.D3.D6.16S.paired.oligos, qfile=gDNA.D3.D6.ccs.qual, checkorient=t, qwindowaverage=25, qwindowsize=50, maxambig=1, maxhomop=8, bdiffs=1, pdiffs=1, processors=4)
+trim.seqs(fasta=cDNA.A1.A4.ccs.fasta, oligos=cDNA.A1.A4.16S.paired.oligos, qfile=cDNA.A1.A4.ccs.qual, checkorient=t, qwindowaverage=25, qwindowsize=50, maxambig=1, maxhomop=8, bdiffs=1, pdiffs=1, processors=4)
+trim.seqs(fasta=cDNA.A5.B2.ccs.fasta, oligos=cDNA.A5.B2.16S.paired.oligos, qfile=cDNA.A5.B2.ccs.qual, checkorient=t, qwindowaverage=25, qwindowsize=50, maxambig=1, maxhomop=8, bdiffs=1, pdiffs=1, processors=4)
+trim.seqs(fasta=cDNA.B3.B6.ccs.fasta, oligos=cDNA.B3.B6.16S.paired.oligos, qfile=cDNA.B3.B6.ccs.qual, checkorient=t, qwindowaverage=25, qwindowsize=50, maxambig=1, maxhomop=8, bdiffs=1, pdiffs=1, processors=4)
+trim.seqs(fasta=cDNA.C1.C4.ccs.fasta, oligos=cDNA.C1.C4.16S.paired.oligos, qfile=cDNA.C1.C4.ccs.qual, checkorient=t, qwindowaverage=25, qwindowsize=50, maxambig=1, maxhomop=8, bdiffs=1, pdiffs=1, processors=4)
+trim.seqs(fasta=cDNA.C5.D2.ccs.fasta, oligos=cDNA.C5.D2.16S.paired.oligos, qfile=cDNA.C5.D2.ccs.qual, checkorient=t, qwindowaverage=25, qwindowsize=50, maxambig=1, maxhomop=8, bdiffs=1, pdiffs=1, processors=4)
+trim.seqs(fasta=cDNA.D3.D6.ccs.fasta, oligos=cDNA.D3.D6.16S.paired.oligos, qfile=cDNA.D3.D6.ccs.qual, checkorient=t, qwindowaverage=25, qwindowsize=50, maxambig=1, maxhomop=8, bdiffs=1, pdiffs=1, processors=4)
+trim.seqs(fasta=extra.sequences.ccs.fasta, oligos=extra.sequences.paired.oligos, qfile=extra.sequences.ccs.qual, qwindowaverage=25, qwindowsize=50, checkorient=t, maxambig=1, maxhomop=8, bdiffs=1, pdiffs=1, processors=4)
+#
+#Step 2: Merge all of the files to create one fasta, qual, and groups files for analysis
+#
+merge.files(input=gDNA.A1.A4.ccs.trim.fasta-gDNA.A5.B2.ccs.trim.fasta-gDNA.B3.B6.ccs.trim.fasta-gDNA.C1.C4.ccs.trim.fasta-gDNA.C5.D2.ccs.trim.fasta-gDNA.D3.D6.ccs.trim.fasta-cDNA.A1.A4.ccs.trim.fasta-cDNA.A5.B2.ccs.trim.fasta-cDNA.B3.B6.ccs.trim.fasta-cDNA.C1.C4.ccs.trim.fasta-cDNA.C5.D2.ccs.trim.fasta-cDNA.D3.D6.ccs.trim.fasta-extra.sequences.ccs.trim.fasta, output=c.g.DNA.16S.combined.trim.fasta)
+merge.files(input=gDNA.A1.A4.ccs.trim.qual-gDNA.A5.B2.ccs.trim.qual-gDNA.B3.B6.ccs.trim.qual-gDNA.C1.C4.ccs.trim.qual-gDNA.C5.D2.ccs.trim.qual-gDNA.D3.D6.ccs.trim.qual-cDNA.A1.A4.ccs.trim.qual-cDNA.A5.B2.ccs.trim.qual-cDNA.B3.B6.ccs.trim.qual-cDNA.C1.C4.ccs.trim.qual-cDNA.C5.D2.ccs.trim.qual-cDNA.D3.D6.ccs.trim.qual-extra.sequences.ccs.trim.qual, output=c.g.DNA.16S.combined.trim.qual)
+merge.files(input=gDNA.A1.A4.ccs.groups-gDNA.A5.B2.ccs.groups-gDNA.B3.B6.ccs.groups-gDNA.C1.C4.ccs.groups-gDNA.C5.D2.ccs.groups-gDNA.D3.D6.ccs.groups-cDNA.A1.A4.ccs.groups-cDNA.A5.B2.ccs.groups-cDNA.B3.B6.ccs.groups-cDNA.C1.C4.ccs.groups-cDNA.C5.D2.ccs.groups-cDNA.D3.D6.ccs.groups-extra.sequences.ccs.groups, output=c.g.DNA.16S.combined.trim.groups)
+#
+#Step 3: See how many sequences you have per group, as well as the total number of sequences remaining in the dataset
+#
+count.groups(group=c.g.DNA.16S.combined.trim.groups)
+summary.seqs(fasta=c.g.DNA.16S.combined.trim.fasta)
+#
+#Step 4: now that you have all of the sequences together in one place, it's time to remove erroneous sequences (unknown taxonomy, ambiguous length, or chimeric)
+#
+unique.seqs(fasta=c.g.DNA.16S.combined.trim.fasta)
+count.seqs(name=current, group=c.g.DNA.16S.combined.trim.groups)
+align.seqs(candidate=current, template=silva.bacteria.fasta, flip=t, processors=4)
+summary.seqs(fasta=current, count=current, processors=4)
+#
+#For screen.seqs, let mothur optimize sequence criteria at 90% threshold.
+#
+screen.seqs(fasta=current, count=current, optimize=start-end-minlength-maxlength, criteria=90, processors=4)
+summary.seqs(fasta=current, count=current, processors=4)
+filter.seqs(fasta=current, vertical=T, processors=4)
+summary.seqs(fasta=current, count=current, processors=4)
+#
+#Run unique.seqs after filter.seqs to compress duplicate sequences that may have results after the filter step
+#
+unique.seqs(fasta=current, count=current)
+summary.seqs(fasta=current, count=current, processors=4)
+#
+#Run pre.cluster command to remove potentially erroneous sequences generated from the PacBio run on the more abundant sequences
+#
+pre.cluster(fasta=current, count=current)
+summary.seqs(fasta=current, count=current, processors=4)
+chimera.uchime(fasta=current, count=current, dereplicate=T, processors=4)	
+remove.seqs(accnos=current, fasta=current, count=current, dups=f)
+classify.seqs(fasta=current, count=current, template=trainset9_032012.pds.fasta, taxonomy=trainset9_032012.pds.tax, cutoff=80, processors=4)
+remove.lineage(fasta=current, count=current, taxonomy=current, taxon=Mitochondria-Chloroplast-Archaea-Eukarya-unknown)
+summary.seqs(fasta=current, count=current, processors=4)
+#
+#Step 5: At this point, the dataset contains only high quality bacterial sequences. Now we must cluster OTUs, starting with calculation of a distance matrix.
+#
+dist.seqs(fasta=current, cutoff=0.2, countends=t, processors=4)
+cluster.split(column=current, count=current, large=T, cutoff=0.2, processors=4)
+count.groups(count=current)
+sub.sample(list=current, count=current, persample=TRUE, label=0.03)
+make.shared(list=current, count=current, groups=cDNA.A1ForFloor-cDNA.A2ForFloor-cDNA.A3ForFloor-cDNA.B1ForFloor-cDNA.B2ForFloor-cDNA.B3ForFloor-cDNA.C1ForFloor-cDNA.C2ForFloor-cDNA.C3ForFloor-cDNA.D1ForFloor-cDNA.D2ForFloor-cDNA.D3ForFloor-gDNA.A1ForFloor-gDNA.A2ForFloor-gDNA.A3ForFloor-gDNA.B1ForFloor-gDNA.B2ForFloor-gDNA.B3ForFloor-gDNA.C1ForFloor-gDNA.C2ForFloor-gDNA.C3ForFloor-gDNA.D1ForFloor-gDNA.D2ForFloor-gDNA.D3ForFloor)
+#
+#Statistics from MOTHUR
+classify.otu(list=c.g.DNA.16S.combined.trim.unique.good.filter.unique.precluster.pick.pick.an.unique_list.0.03.subsample.list, count=c.g.DNA.16S.combined.trim.unique.good.filter.unique.precluster.uchime.pick.pick.pick.subsample.count_table, taxonomy=c.g.DNA.16S.combined.trim.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, label=0.03)
+#
+dist.shared(shared=c.g.DNA.16S.combined.trim.unique.good.filter.unique.precluster.pick.pick.an.unique_list.0.03.subsample.0.03.shared, calc=braycurtis, processors=4)
+#
+rarefaction.single(shared=c.g.DNA.16S.combined.trim.unique.good.filter.unique.precluster.pick.pick.an.unique_list.0.03.subsample.0.03.shared, calc=sobs-chao, freq=100, processors=4)
+#
+summary.single(shared=c.g.DNA.16S.combined.trim.unique.good.filter.unique.precluster.pick.pick.an.unique_list.0.03.subsample.0.03.shared, calc=npshannon-chao, groupmode=t)
