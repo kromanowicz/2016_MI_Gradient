@@ -4,7 +4,7 @@ output: html_document
 ---
 
 #### **Authors:** [Karl J. Romanowicz](mailto:kjromano@umich.edu), Zachary B. Freedman, Rima A. Upchurch, William A. Argiroff, Donald R. Zak
-#### **GitHub Repository:** https://github.com/kromanowicz/MI-Gradient-Romanowicz-2016
+#### **GitHub Repository:** https://github.com/ZakLab-Soils/Romanowicz_2016
 #### **In Review for:** *FEMS Microbiology Ecology*
 #### **Submitted for Review:** March 22, 2016
 
