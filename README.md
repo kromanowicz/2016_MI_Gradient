@@ -12,7 +12,7 @@
 
 This repository is associated with the manuscript ***"Active microorganisms in forest soils differ from the total community yet are shaped by the same environmental factors: the influence of pH and soil moisture"*** written by Karl J. Romanowicz, Zachary B. Freedman, Rima A. Upchurch, William A. Argiroff, and Donald R. Zak at the University of Michigan. Links are provided to the original raw sequencing data stored in the Sequence Read Archive at NCBI. Data stored in this repository include all .oligos files for extracting sample plot data from barcoded sequencing runs, final output files generated from the MOTHUR bioinformatic pipeline and used in all downstream statistics, and the RMarkdown dynamic document with rendered statistical code. The full MOTHUR batch files and associated reference databases are also included for reproducibility purposes.
 
-Link to the rendered code file for production of all figures and statistical analyses *(created with MI-Gradient-Romanowicz-2016.Rmd)*: [http://rpubs.com/kjromano/MI-Gradient-2016] (http://rpubs.com/kjromano/MI-Gradient-2016)
+Link to the rendered code file for production of all figures and statistical analyses *(created with MI-Gradient-Romanowicz-2016.Rmd)*: [http://rpubs.com/kjromano/MI_Gradient_Romanowicz_2016] (http://rpubs.com/kjromano/MI_Gradient_Romanowicz_2016)
 
 Direct any questions regarding this repository to lead author [Karl J. Romanowicz](mailto:kjromano@umich.edu).
 
