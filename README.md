@@ -1,4 +1,4 @@
-# Environmental determinants differentiate metabolically active soil microorganisms from the total community: the influence of pH and soil moisture
+# Active microorganisms in forest soils differ from the total community yet are shaped by the same environmental factors: the influence of pH and soil moisture
 
 
 #### Karl J. Romanowicz, Zachary B. Freedman, Rima A. Upchurch, William A. Argiroff, and Donald R. Zak
@@ -10,7 +10,7 @@
 
 ***************
 
-This repository is associated with the manuscript ***"Environmental determinants differentiate metabolically active soil microorganisms from the total community: the influence of pH and soil moisture"*** written by Karl J. Romanowicz, Zachary B. Freedman, Rima A. Upchurch, William A. Argiroff, and Donald R. Zak at the University of Michigan. Links are provided to the original raw sequencing data stored in the Sequence Read Archive at NCBI. Data stored in this repository include all .oligos files for extracting sample plot data from barcoded sequencing runs, final output files generated from the MOTHUR bioinformatic pipeline and used in all downstream statistics, and the RMarkdown dynamic document with rendered statistical code. The full MOTHUR batch files and associated reference databases are also included for reproducibility purposes.
+This repository is associated with the manuscript ***"Active microorganisms in forest soils differ from the total community yet are shaped by the same environmental factors: the influence of pH and soil moisture"*** written by Karl J. Romanowicz, Zachary B. Freedman, Rima A. Upchurch, William A. Argiroff, and Donald R. Zak at the University of Michigan. Links are provided to the original raw sequencing data stored in the Sequence Read Archive at NCBI. Data stored in this repository include all .oligos files for extracting sample plot data from barcoded sequencing runs, final output files generated from the MOTHUR bioinformatic pipeline and used in all downstream statistics, and the RMarkdown dynamic document with rendered statistical code. The full MOTHUR batch files and associated reference databases are also included for reproducibility purposes.
 
 Link to the rendered code file for production of all figures and statistical analyses *(created with MI-Gradient-Romanowicz-2016.Rmd)*: ___ 
 
@@ -39,7 +39,7 @@ The original .fastq files were submitted to the NCBI Sequence Read Archive under
 	- `bacteria.master.list.subsample.batch` Bacteria MOTHUR batch file
 	- `fungi.master.list.subsample.batch` Fungi MOTHUR batch file
 
-3. **MI-Gradient-Romanowicz-2016.Rmd:** RMarkdown dynamic document with rendered code for complete statistical reproducibility.
+3. **MI-Gradient-Romanowicz-2016.Rmd:** RMarkdown dynamic document with rendered code for complete statistical reproducibility within the R environment.
 
 
 **Note:** This project is under the General MIT Public License.
