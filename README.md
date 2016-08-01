@@ -5,7 +5,9 @@
 
 
 
-##### Submitted for review in ***FEMS Microbiology Ecology*** on March 22, 2016
+##### Accepted in ***FEMS Microbiology Ecology*** on July 6, 2016
+
+##### Link to the article: http://femsec.oxfordjournals.org/content/92/10/fiw149.abstract?ijkey=1zbz8LGUdUkZ3SC&keytype=ref
 
 
 ***************
