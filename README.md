@@ -5,27 +5,26 @@
 
 
 
-##### Accepted in ***FEMS Microbiology Ecology*** on July 6, 2016
+##### Published in ***FEMS Microbiology Ecology*** on July 6, 2016
 
-##### Link to the article: http://femsec.oxfordjournals.org/content/92/10/fiw149.abstract?ijkey=1zbz8LGUdUkZ3SC&keytype=ref
+##### Link to the article: [https://academic.oup.com/femsec/article/92/10/fiw149/2197794](https://academic.oup.com/femsec/article/92/10/fiw149/2197794)
 
-
-***************
-
-This repository is associated with the manuscript ***"Active microorganisms in forest soils differ from the total community yet are shaped by the same environmental factors: the influence of pH and soil moisture"*** written by Karl J. Romanowicz, Zachary B. Freedman, Rima A. Upchurch, William A. Argiroff, and Donald R. Zak at the University of Michigan. Links are provided to the original raw sequencing data stored in the Sequence Read Archive at NCBI. Data stored in this repository include all .oligos files for extracting sample plot data from barcoded sequencing runs, final output files generated from the MOTHUR bioinformatic pipeline and used in all downstream statistics, and the RMarkdown dynamic document with rendered statistical code. The full MOTHUR batch files and associated reference databases are also included for reproducibility purposes.
-
-Link to the rendered code file for production of all figures and statistical analyses *(created with MI-Gradient-Romanowicz-2016.Rmd)*: [http://rpubs.com/kjromano/MI_Gradient_Romanowicz_2016] (http://rpubs.com/kjromano/MI_Gradient_Romanowicz_2016)
-
-Direct any questions regarding this repository to lead author [Karl J. Romanowicz](mailto:kjromano@umich.edu).
+![ ](Images/FEMS.png)
 
 ***************
 
-####Information about this repository
+**Rendered Code:** [https://rpubs.com/kjromano/MI_Gradient_Romanowicz_2016](https://rpubs.com/kjromano/MI_Gradient_Romanowicz_2016)
 
-##### **Original .fastq files:**
-The original .fastq files were submitted to the NCBI Sequence Read Archive under BioProject [PRJNA222775](http://www.ncbi.nlm.nih.gov/bioproject/PRJNA222775) with SRA accession numbers [SRR1944476](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1944476) and [SRR1944477](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1944477).
+**NCBI BioProject:** [PRJNA222775](http://www.ncbi.nlm.nih.gov/bioproject/PRJNA222775) for raw .fastq files
+
+**SRA Accession Numbers:** [SRR1944476](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1944476) and [SRR1944477](http://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1944477).
+
+**Direct any questions regarding this repository to lead author:** [Karl J. Romanowicz](mailto:kjromano@umich.edu).
+
+***************
 
 ##### **Directories:**
+
 1. **Data:** Includes final output files from **MOTHUR** necessary to run statistics in **R** as well as the environmental metadata `env.txt` necessary for PERMANOVA analyses.
 	- **Bacteria:** all `.oligos` files for separating bacterial reads by plot
 	- **Fungi:** all `.oligos` files for separating fungal reads by plot
